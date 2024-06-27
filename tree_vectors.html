@@ -5,10 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Emma's Choropleth</title>
 
+		<link rel="stylesheet" type="text/css" href="scripts/dropdown.css">
 
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed:wght@500&display=swap');
-			
 			@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Condensed:wght@500&display=swap');
 
 			b {
@@ -21,31 +21,6 @@
 				font-family: 'Raleway', sans-serif;
 				text-align: justify;
 			}
-
-			.menu {
-					background-color: #080808;
-					overflow: hidden;
-					position: fixed;
-					width: 100%;
-					top: 0;
-					z-index: 1000;
-				}
-				.menu a {
-					float: right;
-					color: #ffffff;
-					text-align: center;
-					padding-right: 25px;
-					padding-left: 25px;
-					padding-top: 25px;
-					padding-bottom: 25px;
-					font-size:20px;
-					font-family: sans sans-serif;
-					text-decoration: none;
-				}
-				.menu a:hover {
-					background-color: #02919c;
-					color: #ffffff;
-				}
 
 				.header h1 {
 					font-family: Roboto Condensed, sans-serif;
@@ -132,10 +107,22 @@
 	<body>
 		<!drop down menu>
 			<div class="menu">
-			  <a href="#about">ABOUT</a>
-			  <a href="#maps">MAPS</a>
-			  <a href="EmmasGISPortfolio_Home.html">HOME</a>
-			</div>
+		        <div class="dropdown">
+		            <button class="dropbtn">MAPS 
+		                <i class="fa fa-caret-down"></i>
+		            </button>
+		            <div class="dropdown-content">
+		                <a href="choropleth.html">Choropleth</a>
+		                <a href="tree_vectors.html">Tree Vectors</a>
+		                <a href="lcc.html">Landcover Classification</a>
+		                <a href="rem.html">Relative Elevation Model</a>
+		                <a href="carbon_seq.html">Carbon Sequestration</a>
+		                <a href="LiDAR.html">LiDAR</a>
+		            </div>
+		        </div> 
+		        <a href="about.html">ABOUT</a>
+		        <a href="EmmasGISPortfolio_Home.html">HOME</a>
+		    </div>
 
 		<div class="header">
 			<h1> MAPS </h1>

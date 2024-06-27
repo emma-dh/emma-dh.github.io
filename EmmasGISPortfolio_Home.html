@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			<meta charset="UTF-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>Emma's GIS Portfolio</title>
 
-			
+			<link rel="stylesheet" type="text/css" href="scripts/dropdown.css">
 
 			<style>
 				@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed:wght@500&display=swap');
@@ -21,31 +23,7 @@
 					text-align: justify;
 				}
 
-				.menu {
-					background-color: #080808;
-					overflow: hidden;
-					position: fixed;
-					width: 100%;
-					top: 0;
-					z-index: 1000;
-				}
-				.menu a {
-					float: right;
-					color: #ffffff;
-					text-align: center;
-					padding-right: 25px;
-					padding-left: 25px;
-					padding-top: 25px;
-					padding-bottom: 25px;
-					font-size:20px;
-					font-family: sans sans-serif;
-					text-decoration: none;
-				}
-				.menu a:hover {
-					background-color: #02919c;
-					color: #ffffff;
-				}
-
+				
 				.header {
 					font-family: Roboto Condensed, sans-serif;
 					position: absolute;
@@ -56,7 +34,6 @@
 				}
 				img {
 					width:100%;
-
 				}
 				
 
@@ -68,7 +45,7 @@
            			padding: 30px;
            		}
            		.aboutCourse {
-           			padding: 30px;
+           			padding: 30px;AQ
            		}
 
            		.mapsHeading h2 {
@@ -112,17 +89,28 @@
 		<body>
 			<!drop down menu>
 			<div class="menu">
-			  <a href="#about">ABOUT</a>
-			  <div>
-			  	<a href="#maps">MAPS</a>
-			  </div>
-			  <a href="EmmasGISPortfolio_Home.html">HOME</a>
-			</div>
+		        <div class="dropdown">
+		            <button class="dropbtn">MAPS 
+		                <i class="fa fa-caret-down"></i>
+		            </button>
+		            <div class="dropdown-content">
+		                <a href="choropleth.html">Choropleth</a>
+		                <a href="tree_vectors.html">Tree Vectors</a>
+		                <a href="lcc.html">Landcover Classification</a>
+		                <a href="rem.html">Relative Elevation Model</a>
+		                <a href="carbon_seq.html">Carbon Sequestration</a>
+		                <a href="LiDAR.html">LiDAR</a>
+		            </div>
+		        </div> 
+		        <a href="about.html">ABOUT</a>
+		        <a href="EmmasGISPortfolio_Home.html">HOME</a>
+		    </div>
 
-			<img src="https://t3.ftcdn.net/jpg/04/40/83/78/360_F_440837843_FNBSiKtvm1FRJ0xxHd1uwlIc96oj6Hxk.jpg">
+		    <img src="https://t3.ftcdn.net/jpg/04/40/83/78/360_F_440837843_FNBSiKtvm1FRJ0xxHd1uwlIc96oj6Hxk.jpg">
 			<div>
 				<h1 class="header">Emma's GIS Portfolio</h1>
 			</div>
+
 			<div class="about">
 				<div class="aboutGIS">
 					<h3><b>About GIS</b></h3>
@@ -136,12 +124,12 @@
 			<div class="mapsHeading">
 				<h2><b>Maps</b></h2>
 				<div class="linkMaps">
-					<a href="choropleth.html">Choropeth</a>
+					<a href="choropleth.html">Choropleth</a>
 					<a href="tree_vectors.html">Tree Vectors</a>
-					<a href="#map1">Landcover Classification</a>
-					<a href="#map1">Relative Elevation Model</a>
-					<a href="#map1">Carbon Sequestration</a>
-					<a href="#map1">LiDAR</a>
+					<a href="lcc.html">Landcover Classification</a>
+					<a href="rem.html">Relative Elevation Model</a>
+					<a href="carbon_seq.html">Carbon Sequestration</a>
+					<a href="LiDAR.html">LiDAR</a>
 				</div>
 
 			</div>
