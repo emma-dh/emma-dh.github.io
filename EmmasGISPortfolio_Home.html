@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Emma's GIS Portfolio</title>
+
+			
+
+			<style>
+				@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed:wght@500&display=swap');
+				@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Condensed:wght@500&display=swap');
+
+			b {
+				font-weight: bold;
+			}
+
+
+				body {
+					padding: 0;
+					margin: 0;
+					font-family: 'Raleway', sans-serif;
+					text-align: justify;
+				}
+
+				.menu {
+					background-color: #080808;
+					overflow: hidden;
+					position: fixed;
+					width: 100%;
+					top: 0;
+					z-index: 1000;
+				}
+				.menu a {
+					float: right;
+					color: #ffffff;
+					text-align: center;
+					padding-right: 25px;
+					padding-left: 25px;
+					padding-top: 25px;
+					padding-bottom: 25px;
+					font-size:20px;
+					font-family: sans sans-serif;
+					text-decoration: none;
+				}
+				.menu a:hover {
+					background-color: #02919c;
+					color: #ffffff;
+				}
+
+				.header {
+					font-family: Roboto Condensed, sans-serif;
+					position: absolute;
+					top: 37%;
+					right: 34.5%;
+					font-size: 40pt;
+					color: black;
+				}
+				img {
+					width:100%;
+
+				}
+				
+
+				.about {
+					display: grid;
+           			grid-template-columns: 1fr 1fr;
+           		}
+           		.aboutGIS {
+           			padding: 30px;
+           		}
+           		.aboutCourse {
+           			padding: 30px;
+           		}
+
+           		.mapsHeading h2 {
+           			margin-left: 30px;
+           		}
+           		.linkMaps{
+           			margin: 30px;
+           			margin-bottom: 60px;
+           			margin-top: 60px;
+           	
+           		}
+           		.linkMaps a {
+           			text-decoration: none;
+           			color: #ffffff;
+           			background-color: #00a7b3;
+           			padding: 30px;
+           		}
+           		.linkMaps a:hover {
+           			background-color: #02919c;
+           		}
+
+           		.footer {
+           			background-color: #080808;
+           		}
+           		.footer h3 {
+           			color: #ffffff;
+           			padding-left: 30px;
+           			padding-top:40px;
+           		}
+           		.footer p {
+           			color: #ffffff;
+           			text-align: center;
+           			padding-bottom: 40px;
+           			padding-top: 50px;
+           		}
+
+			</style>
+			
+		</head>
+
+		<body>
+			<!drop down menu>
+			<div class="menu">
+			  <a href="#about">ABOUT</a>
+			  <div>
+			  	<a href="#maps">MAPS</a>
+			  </div>
+			  <a href="EmmasGISPortfolio_Home.html">HOME</a>
+			</div>
+
+			<img src="https://t3.ftcdn.net/jpg/04/40/83/78/360_F_440837843_FNBSiKtvm1FRJ0xxHd1uwlIc96oj6Hxk.jpg">
+			<div>
+				<h1 class="header">Emma's GIS Portfolio</h1>
+			</div>
+			<div class="about">
+				<div class="aboutGIS">
+					<h3><b>About GIS</b></h3>
+					<p>Geographic Information Systems (GIS) is a technology for collecting, managing, analyzing, and visualizing spatial and geographic data. It is used to perform tasks such as spatial analysis and data visualization to support decision making. GIS applications can be observed in various fields, including urban planning, environmental management, transportation, public health, and agriculture, enabling better understanding and management of geographic information through interactive maps and analytical tools.</p>
+				</div>
+				<div class="aboutCourse">
+					<h3><b>About Course</b></h3>
+					<p>This course is focused on understanding how (and why) GIS are used for administrative purposes by governments, environmental monitoring, land use planning, etc. The aim is to gain skills and knowledge in using different GIS programs (QGIS, ArcGISPro, EsriOnline...) to tackle different situations, as well as, to understand basic cartographic principles when it comes to ideal map type, symbology and layout for the data represented. Additionally, this course introduces basic coding, such as making a website from scratch (this one!). </p>
+				</div>
+			</div>
+			<div class="mapsHeading">
+				<h2><b>Maps</b></h2>
+				<div class="linkMaps">
+					<a href="choropleth.html">Choropeth</a>
+					<a href="tree_vectors.html">Tree Vectors</a>
+					<a href="#map1">Landcover Classification</a>
+					<a href="#map1">Relative Elevation Model</a>
+					<a href="#map1">Carbon Sequestration</a>
+					<a href="#map1">LiDAR</a>
+				</div>
+
+			</div>
+
+			<div class="footer">
+				<h3>UCU</h3>
+				<p>@EmmasGISPortfolio2024</p>
+			</div>
+
+		</body>
+	</html>

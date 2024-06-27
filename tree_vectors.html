@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Emma's Choropleth</title>
+
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed:wght@500&display=swap');
+			
+			@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Condensed:wght@500&display=swap');
+
+			b {
+				font-weight: bold;
+			}
+
+			body {
+				padding: 0;
+				margin: 0;
+				font-family: 'Raleway', sans-serif;
+				text-align: justify;
+			}
+
+			.menu {
+					background-color: #080808;
+					overflow: hidden;
+					position: fixed;
+					width: 100%;
+					top: 0;
+					z-index: 1000;
+				}
+				.menu a {
+					float: right;
+					color: #ffffff;
+					text-align: center;
+					padding-right: 25px;
+					padding-left: 25px;
+					padding-top: 25px;
+					padding-bottom: 25px;
+					font-size:20px;
+					font-family: sans sans-serif;
+					text-decoration: none;
+				}
+				.menu a:hover {
+					background-color: #02919c;
+					color: #ffffff;
+				}
+
+				.header h1 {
+					font-family: Roboto Condensed, sans-serif;
+					font-size: 40pt;
+					color: #ffffff;
+					background-color:  #00a7b3;
+					padding:10px;
+					padding-left: 30px;
+					margin-top: 100px;
+					width: 74.145%;
+				}
+
+				.treesInfo {
+					margin: 30px;
+				}
+				.Instructions {
+					background-color: #d7f7f5;
+					padding-left: 40px;
+					padding-right: 40px;
+					padding-top: 30px;
+					padding-bottom: 30px;
+				}
+				.assignment {
+					padding-top: 20px;
+					margin-left:40px;
+					margin-right: 40px;
+				}
+				.choropleth {
+					text-align: center;
+					margin-top: 30px;
+				}
+				.choropleth img {
+            	/*border: 1px solid black;
+           		margin-top: 20px;*/
+           		width: 60%;
+        		}
+        		.assignment_pt2 {
+        			margin-left:40px;
+        			margin-right: 40px;
+        		}
+        		.assignment_pt2 h3 {
+        			margin-top: 30px;
+        		}
+        		.densityMap {
+					text-align: center;
+				}
+				.densityMap img {
+            	/*border: 1px solid black;
+           		margin-top: 20px;*/
+           		width: 60%;
+        		}
+        		.map {
+        			text-align: center;
+        		}
+        		.image.fit {
+    			display: block;
+    			margin: 20px 0; /* Adjust margin as needed */
+				}
+
+				iframe {
+				    width: 60%;
+				    height: 600px; /* Adjust height as needed */
+				    border: 0;
+				}
+
+
+				.footer {
+           			background-color: #080808;
+           		}
+           		.footer h3 {
+           			color: #ffffff;
+           			padding-left: 30px;
+           			padding-top:40px;
+           		}
+           		.footer p {
+           			color: #ffffff;
+           			text-align: center;
+           			padding-bottom: 40px;
+           			padding-top: 50px;
+           		}
+
+		</style>
+	</head>
+	<body>
+		<!drop down menu>
+			<div class="menu">
+			  <a href="#about">ABOUT</a>
+			  <a href="#maps">MAPS</a>
+			  <a href="EmmasGISPortfolio_Home.html">HOME</a>
+			</div>
+
+		<div class="header">
+			<h1> MAPS </h1>
+		</div>
+		<div class="treesInfo">
+			<h1><b>2. Tree Vectors</b></h1>
+			<hr>
+			<div class="Instructions">
+				<h4>This is an interactive map!</h4>
+				<p>Each point on the map represents a tree in Utrecht. When you click on one of the points, it provides you with information on: the Dutch name for the tree species; the scientific name for the tree species the year the tree was planted; the ‘owner’ of the tree (most belong to the municipality); the neighborhood it is located in; the city district it is located in; and its “tree number.”</p>
+				<p>You can access a range of information through the layers tab in the top-right corner. (Guide to understanding the layers is provided in the pop-up!) </p>
+			</div>
+		
+			<div class="map">
+				<a href="#" class="image fit">
+					<iframe position= center; width="100%" height="500px" style="border:1" src="https://experience.arcgis.com/experience/eeb8a23c1fd64d2aa047bb3d59b8c05f/" frameborder="2" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen>allowfullscreen>iFrames are not supported on this page.</iframe>
+				</a>
+			</div>
+
+			<div class="assignment">
+				<p>For this assignment I analyzed data concerning all of the the trees in Utrecht regestered by the municipality. I mainly looked at tree density, i.e. how many trees are present in each neighborhood, with the end-goal of determining overall "greenees" of each neighborhood. In doing so, I found that this data can be analysed from two different starting blocks: point count and rate area. It is important to look at both variables as one keeps in mind absolute number of trees and the other looks at the number of trees in relation to the size of a neighborhood. As such both should be considered when determining overall "greeness." To present this data I made a side by side choropleth comparison.</p>
+				<p><b>Skills Acquired:</b>Familiarized myself with a new GIS program (ArcGISPro) while mastering previously learned skills (choropleth making!), as well as, learning to use analyzing tools withing the software and chosing new properties to map.</p>
+			</div>
+			<div class="choropleth">
+			<img src="maps/choropleth_trees.png">
+			</div>
+			<div class="assignment_pt2">
+				<p>To further analyze this data I used geoprocessing tools to analyze density for both my chosen tree species and for all of the trees in Utrecht to see how they compared. The results can be seen below in two comparison density maps. One is a Kernel density map and the other a Point density map. I used both to see if there were any observable differences but they appear very similar. However, with this you can identify easily differences between the all trees layer and the platanus x hispanica layer.</p>
+				<p><b>Skills Acquired:</b>Familiarized myself geoprocessing tools and learning about different analysis techniques. Moreover, I am confident in navigating layers and identifying sets of data within ArcGISPro.</p>
+			</div>
+			<div class="densityMap">
+				<img src="maps/Kernel_Density.png">
+				<img src="maps/Point_Density.png">
+			</div>
+		</div>
+
+		<div class="footer">
+				<h3>UCU</h3>
+				<p>@EmmasGISPortfolio2024</p>
+			</div>
+	</body>
+	</html>
