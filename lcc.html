@@ -1,15 +1,16 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 	<html>
-		<head>
-			<meta charset="UTF-8">
-    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Emma's LCC</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Emma's Classifications</title>
 
-			<link rel="stylesheet" type="text/css" href="scripts/dropdown.css">
+		<link rel="stylesheet" type="text/css" href="scripts/dropdown.css">
 
-			<style>
-				@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed:wght@500&display=swap');
-				@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Condensed:wght@500&display=swap');
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed:wght@500&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Condensed:wght@500&display=swap');
 
 			b {
 				font-weight: bold;
@@ -23,7 +24,74 @@
 				text-align: justify;
 			}
 
-			.footer {
+				.header h1 {
+					font-family: Roboto Condensed, sans-serif;
+					font-size: 40pt;
+					color: #ffffff;
+					background-color:  #00a7b3;
+					padding:10px;
+					padding-left: 30px;
+					margin-top: 100px;
+					width: 74.145%;
+				}
+
+				.lccInfo {
+					margin: 30px;
+				}
+				.definition {
+					background-color: #d7f7f5;
+					padding-left: 40px;
+					padding-right: 40px;
+					padding-top: 30px;
+					padding-bottom: 30px;
+				}
+				.assignment {
+					padding-top: 20px;
+					margin-left:40px;
+					margin-right: 40px;
+				}
+				.PRINT_SDG_15_1_1 {
+					text-align: center;
+				}
+				.PRINT_SDG_15_1_1 img{
+            	/*border: 1px solid black;
+           		margin-top: 20px;*/
+           		width: 60%;
+        		}
+        		.assignment_pt2 {
+        			margin-left:40px;
+        			margin-right: 40px;
+        		}
+        		.assignment_pt2 h3 {
+        			margin-top: 30px;
+        		}
+        		.PRINT_SDG_14_5_1 {
+					text-align: center;
+				}
+				.PRINT_SDG_14_5_1 img{
+            	/*border: 1px solid black;
+           		margin-top: 20px;*/
+           		width: 60%;
+        		}
+
+
+        		/* insert webmap
+        		.map {
+        			text-align: center;
+        		}
+        		.image.fit {
+    			display: block;
+    			margin: 20px 0; /* Adjust margin as needed */
+				}
+
+				iframe {
+				    width: 60%;
+				    height: 600px; /* Adjust height as needed */
+				    border: 0;
+				}
+				*/
+
+				.footer {
            			background-color: #080808;
            		}
            		.footer h3 {
@@ -37,11 +105,11 @@
            			padding-bottom: 40px;
            			padding-top: 50px;
            		}
-			</style>
-		</head>
 
-		<body>
-			<!drop down menu>
+		</style>
+	</head>
+	<body>
+		<!drop down menu>
 			<div class="menu">
 		        <div class="dropdown">
 		            <button class="dropbtn">MAPS 
@@ -60,12 +128,54 @@
 		        <a href="EmmasGISPortfolio_Home.html">HOME</a>
 		    </div>
 
-		    <div class="footer">
+		<div class="header">
+			<h1> MAPS </h1>
+		</div>
+		
+		<div class="lccInfo">
+			<h1><b>3. Landcover Classification</b></h1>
+			<hr>
+			<div class="definition">
+				<h4>What is a Choropleth?</h4>
+				<!--
+				<p>A choropleth is a thematic map that uses hierarchy of color (and sometimes size) to represent a range of data on a global scale and compare data between countries through a normalized indicator.  Some benefits include that it is really simple to make and to interpret, which is why it is a common map among media. Some drawbacks, though, can be seen in the precision of the data. The data is generalized over a large land area, leading to lack of specificity. Additionally, only a certain type of data is accurately comparable between countries – percent data – limiting mapping options. </p>
+			</div>
+			<div class="assignment">
+				<p>For this assignment, we were challenged to create a choropleth from the UN dataset for indicator 15.1.1 – describing forest area as a proportion of total land area in percentage. The results from this venture can be observed in the map below.</p>
+
+				<p><b>Skills Aquired:</b> From making this map I familiarized myself with QGIS – I learned how to make a choropleth, clean and understand data, and tinker with the symbology and the layout to create the map I have in mind.</p>
+			</div>
+			<div class="PRINT_SDG_15_1_1">
+				<img src="maps/PRINT_SDG_15_1_1.png">
+			</div>
+			<div class="assignment_pt2">
+				<p>The second part of this assignment required finding a relevant UN indicator, finding data for this indicator and representing these findings as a choropleth.</p>
+				<h3><b>My Indicator</b></h3>
+				<p>SDG indicator 14.5.1 falls under SDG 14: Life below water, which aims to promote safe and sustainable ocean activity. This indicator also falls under the goal 14.5, stating that “By 2020, conserve at least 10 per cent of coastal and marine areas, consistent with national and international law and based on the best available scientific information.” Ultimately, 14.5.1 looks at the overall marine area in relation to how much of this area is protected.</p>
+
+				<p>I chose this indicator, 1) because it had sufficient data to make a meaningful map; and 2) because I thought it was relevant and comparable to the first map (indicator 15.1.1). Both maps look environmental sustainability, but from two different angles. One looks at what is being done on land, and the other looks at marine efforts, offering a more complete view of global conservation.</p>
+
+				<p><b>Skills Aquired:</b> From making this map I became comfortable with QGIS – I mastered previously acquired skills and learned to find my own data and consider relevant factors along this process (such as quantity and quality of data or how maps can morf bias against data based on how it is presented).</p>
+			</div>
+			<div class="PRINT_SDG_14_5_1">
+				<img src="maps/PRINT_SDG_14_5_1.png">
+			</div>
+			<div class="comparison">
+				<h3><b>Comparison</b></h3>
+				<p>In an effort to compare these two maps, I uploaded them onto ESRI Online and created a slider webmap – an interactive side by side view of the two maps.</p>
+				<p><b>Skills Aquired:</b>Became familiar with ESRI Online (relearning skills I had already mastered on QGIS) and learned how to make an interactive webmap.</p>
+			</div>
+			<div class="map">
+				<a href="#" class="image fit">
+					<iframe position= center; width="100%" height="500px" style="border:1" src="https://uni-utrecht.maps.arcgis.com/apps/instant/media/index.html?appid=56f4af6443574ea4b9ac77f2d2328695" frameborder="2" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen>allowfullscreen>iFrames are not supported on this page.</iframe>
+				</a>
+			-->
+			</div>
+		</div>
+
+		<div class="footer">
 				<h3>UCU</h3>
 				<p>@EmmasGISPortfolio2024</p>
 			</div>
-		</body>
+	</body>
 	</html>
-
-
-				
