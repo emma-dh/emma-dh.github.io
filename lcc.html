@@ -6,6 +6,8 @@
 		<title>Emma's Classifications</title>
 
 		<link rel="stylesheet" type="text/css" href="scripts/dropdown.css">
+		<link rel="stylesheet" type="text/css" href="scripts/image_expand.css">
+
 
 
 		<style>
@@ -14,6 +16,12 @@
 
 			b {
 				font-weight: bold;
+			}
+			i{
+				font-weight: italics;
+			}
+			u {
+				font-weight: underline;
 			}
 
 
@@ -45,51 +53,77 @@
 					padding-top: 30px;
 					padding-bottom: 30px;
 				}
+
+				.groundwork {
+					margin-top:50px;
+					padding-top: 30px;
+					padding-left:40px;
+					padding-right: 40px;
+					margin-left: 60px;
+					margin-right: 60px;
+					border: 1px solid black;
+				}
+				.groundwork p {
+					margin-left: 30px;
+				}
+				.groundwork .skills.acquired {
+					margin-left: 0px;
+				}
+				.agriculture {
+					margin-top: 30px;
+					margin-left: 30px;
+					display: grid;
+           			grid-template-columns: 2.5fr 1fr;
+           			margin-bottom: 30px;
+				}
+				.agriculture img {
+					height: 450px;
+				}
+				.false.color.bands {
+					background-color: #d7f7f5;
+					margin-bottom: 70px;
+					padding-top: 10px;
+					margin-top: 30px;
+					padding-right: 10px;
+					margin-right: 45px;
+				}
+				.spectral.profile {
+					width: 90%;
+					margin-top: 20px;
+					margin-bottom: 10px;
+				}
+
 				.assignment {
-					padding-top: 20px;
+					padding-top: 40px;
 					margin-left:40px;
 					margin-right: 40px;
+					padding-bottom: 40px;
 				}
-				.PRINT_SDG_15_1_1 {
+				.classification.maps {
+					padding-top: 0px;
+					padding-bottom: 10px;
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
 					text-align: center;
 				}
-				.PRINT_SDG_15_1_1 img{
-            	/*border: 1px solid black;
-           		margin-top: 20px;*/
-           		width: 60%;
-        		}
-        		.assignment_pt2 {
-        			margin-left:40px;
-        			margin-right: 40px;
-        		}
-        		.assignment_pt2 h3 {
-        			margin-top: 30px;
-        		}
-        		.PRINT_SDG_14_5_1 {
-					text-align: center;
+				.classification img {
+					height: 205px;
 				}
-				.PRINT_SDG_14_5_1 img{
-            	/*border: 1px solid black;
-           		margin-top: 20px;*/
-           		width: 60%;
-        		}
 
-
-        		/* insert webmap
+        		/* insert webmap */
         		.map {
         			text-align: center;
         		}
         		.image.fit {
     			display: block;
-    			margin: 20px 0; /* Adjust margin as needed */
+    			margin: 40px 0; /* Adjust margin as needed */
 				}
-
 				iframe {
 				    width: 60%;
 				    height: 600px; /* Adjust height as needed */
 				    border: 0;
 				}
-				*/
+
 
 				.footer {
            			background-color: #080808;
@@ -136,46 +170,143 @@
 			<h1><b>3. Landcover Classification</b></h1>
 			<hr>
 			<div class="definition">
-				<h4>What is a Choropleth?</h4>
-				<!--
-				<p>A choropleth is a thematic map that uses hierarchy of color (and sometimes size) to represent a range of data on a global scale and compare data between countries through a normalized indicator.  Some benefits include that it is really simple to make and to interpret, which is why it is a common map among media. Some drawbacks, though, can be seen in the precision of the data. The data is generalized over a large land area, leading to lack of specificity. Additionally, only a certain type of data is accurately comparable between countries – percent data – limiting mapping options. </p>
+				<h4>True vs False Color Composite</h4>
+				
+				<p>True color and false color composites are techniques used in remote sensing to visualize and analyze images from satellites or other sensors. A true color composite uses the red, green, and blue (RGB) channels to create an image that closely resembles what the human eye would see, making it ideal for general visual interpretation and public distribution. In contrast, a false color composite assigns visible colors to non-visible wavelengths, such as near-infrared, to highlight specific features like vegetation health, water bodies, and geological formations. True color composites offer a natural appearance, while false color composites, though requiring specialized understanding, can reveal details not visible in true color images, aiding in environmental monitoring, agricultural assessments, and urban planning.</p>
 			</div>
+			
+			<div class="groundwork">
+				<h3><b>GROUNDWORK</b></h3>
+				<p>In preparation for this assignment (see below) we played around with "color composites" and how to use them to our advantage to best show landcover. As such, I created a false color composite of Utrecht highlighting agricultural landuse.</p>
+				<div class="agriculture">
+					<img src="maps/false-color composition.png">
+					<div class="false color bands">
+						<p><b>(False) color composite used:</b></p>
+						<p><i>Red</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Band 11</p>
+						<p><i>Green</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Band 8</p></p>
+						<p><i>Blue</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Band 2</p></p>
+						<p>&nbsp;</p>
+
+						<p><b>"True color composite":</b></p>
+						<p><i>Red</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Band 4</p>
+						<p><i>Green</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Band 3</p></p>
+						<p><i>Blue</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Band 2</p></p>
+					</div>
+				</div>
+				<p>In this map, agriculture should be prominent because it uses short wave Infrared–1 (B11), near-infrared (B8), and blue (B2). The first two bands are useful in monitoring crop health as they are good at highlighting dense vegetation (shown as dark green). In reference to the image above, I see that in Utrecht there is not much green – which makes sense given that it is a city and there are no crops. Additionally, around Utrecht there is some green present – which is fitting of the crop and forest areas that surround it.</p>
+				<p class="skills acquired"><b>Skills Aquired:</b> Doing the prep work I learned what color composites are and how I can manipulate them to best present information. I also learned how to adjust the band settings on ArcGIS in order to accomplish the color composite that I need. What is more, I now know a little about spectral profile and how to make/acquire one through ArcGIS. (The practice one I made can be seen below!)</p>
+				<img class="spectral profile" src="maps/spectral profile.png">
+			</div>
+
 			<div class="assignment">
-				<p>For this assignment, we were challenged to create a choropleth from the UN dataset for indicator 15.1.1 – describing forest area as a proportion of total land area in percentage. The results from this venture can be observed in the map below.</p>
+				<h2><b>ASSIGNMENT</b></h2>
+				<hr>
+				<h3><b>Exploring classification schemes</b></h3>
+				<div>
+					<p>The goal for this assignment was to explore different classification schemes and find the one that best classifies landcover of a chosen area of interest. For me, this area of interest is the city of Utrecht. With this in mind, I ran a satellite image of this area under 3 different types of classification:</p>
+					<ul>
+						<li><p>Unsupervised Pixel Based Classification</p></li>
+						<li><p>Unsupervised Object Based Classification</p></li>
+						<li><p>Supervised Pixel Based Classification</p></li>
+					</ul>
+					<p>An unsupervised classification sheme depends on the system's ability to identify patterns and structures from unlabeled data, on either a pixel by pixel basis or through object recognition.</p>
+					<p>Supervised classification functions similarly except that the system is given a base-layer to work off of. Before runninig the chosen classification scheme (pixel or obeject based) you define the classification classes you want to identify and then manually label some regions of your image to calibrate and facilitate class recognition.</p>
+					<p>(Press image to expand map.)</p>
+				</div>
+				<div class="classification maps">
+					<div>
+						<h4>Unsupervised Pixel Based Classification</h4>
+						<img src="maps/unsupervised pixel based classification.png" alt="Thumbnail" class="image-thumbnail">
+					</div>
+					<div>
+						<h4>Unsupervised Object Based Classification</h4>
+						<img src="maps/unsupervised object based classification.png" alt="Thumbnail" class="image-thumbnail">
+					</div>
+					<div>
+						<h4>Supervised Pixel Based Classification</h4>
+						<img src="maps/supervised pixel based classification.png" alt="Thumbnail" class="image-thumbnail">
+					</div>
+				</div>
+							<div id="myModal" class="modal">
+							  <span class="close">&times;</span>
+							  <img class="modal-content" id="img01">
+							  <div id="caption"></div>
+							</div>
+							<script>
+							    // Get the modal
+							    var modal = document.getElementById("myModal");
 
-				<p><b>Skills Aquired:</b> From making this map I familiarized myself with QGIS – I learned how to make a choropleth, clean and understand data, and tinker with the symbology and the layout to create the map I have in mind.</p>
-			</div>
-			<div class="PRINT_SDG_15_1_1">
-				<img src="maps/PRINT_SDG_15_1_1.png">
-			</div>
-			<div class="assignment_pt2">
-				<p>The second part of this assignment required finding a relevant UN indicator, finding data for this indicator and representing these findings as a choropleth.</p>
-				<h3><b>My Indicator</b></h3>
-				<p>SDG indicator 14.5.1 falls under SDG 14: Life below water, which aims to promote safe and sustainable ocean activity. This indicator also falls under the goal 14.5, stating that “By 2020, conserve at least 10 per cent of coastal and marine areas, consistent with national and international law and based on the best available scientific information.” Ultimately, 14.5.1 looks at the overall marine area in relation to how much of this area is protected.</p>
+							    // Get the modal image and caption
+							    var modalImg = document.getElementById("img01");
+							    var captionText = document.getElementById("caption");
 
-				<p>I chose this indicator, 1) because it had sufficient data to make a meaningful map; and 2) because I thought it was relevant and comparable to the first map (indicator 15.1.1). Both maps look environmental sustainability, but from two different angles. One looks at what is being done on land, and the other looks at marine efforts, offering a more complete view of global conservation.</p>
+							    // Get all images with class "image-thumbnail" and attach click event
+							    var images = document.querySelectorAll(".image-thumbnail");
+							    images.forEach(function(img) {
+							        img.onclick = function(){
+							            modal.style.display = "block";
+							            modalImg.src = this.src;
+							            captionText.innerHTML = this.alt;
+							        }
+							    });
 
-				<p><b>Skills Aquired:</b> From making this map I became comfortable with QGIS – I mastered previously acquired skills and learned to find my own data and consider relevant factors along this process (such as quantity and quality of data or how maps can morf bias against data based on how it is presented).</p>
-			</div>
-			<div class="PRINT_SDG_14_5_1">
-				<img src="maps/PRINT_SDG_14_5_1.png">
-			</div>
-			<div class="comparison">
-				<h3><b>Comparison</b></h3>
-				<p>In an effort to compare these two maps, I uploaded them onto ESRI Online and created a slider webmap – an interactive side by side view of the two maps.</p>
-				<p><b>Skills Aquired:</b>Became familiar with ESRI Online (relearning skills I had already mastered on QGIS) and learned how to make an interactive webmap.</p>
-			</div>
-			<div class="map">
-				<a href="#" class="image fit">
-					<iframe position= center; width="100%" height="500px" style="border:1" src="https://uni-utrecht.maps.arcgis.com/apps/instant/media/index.html?appid=56f4af6443574ea4b9ac77f2d2328695" frameborder="2" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen>allowfullscreen>iFrames are not supported on this page.</iframe>
-				</a>
-			-->
+							    // Get the <span> element that closes the modal
+							    var span = document.getElementsByClassName("close")[0];
+
+							    // When the user clicks on <span> (x), close the modal
+							    span.onclick = function() { 
+							        modal.style.display = "none";
+							    }
+							</script>
+				<div>
+					<p>From this analysis, it can be concluded that the best classification scheme for this area was "supervised pixel based classification" as it was much more accurate in identifying and mapping land use. There are still a few errors when looking at buildings and crops, but this is minimal in comparison to the first two maps.</p>
+					<p class="skills acquired"><b>Skills Aquired:</b> Through the assignment I learned how to analyse classification schemes on ArcGIS is and further understood the advantages and drawback of each shceme. I also learned the importance and advantage to local knowledge when it comes to landcover imaging.</p>
+				</div>
+				<hr>
+				<h3><b>NDVI: Normalized Difference Vegetation Index</b></h3>
+				<div>
+					<p>The Normalized Difference Vegetation Index (NDVI) is a numerical indicator used in remote sensing to measure and analyze vegetation health and presence on Earth's surface. It is calculated using the reflectance of near-infrared and red light, with values ranging from -1 to +1. Higher positive values indicate dense, healthy vegetation, while negative values indicate non-vegetative surfaces like water or urban areas. NDVI is widely used in agriculture, forestry, environmental monitoring, and climate studies to monitor vegetation changes over time. Despite its usefulness, NDVI can be affected by atmospheric conditions and soil backgrounds.</p>
+					<p>The previously established area of interest (city of Utrecht) was analysed using NDVI to scan for vegetation and further define landuse classifications. The results can be seen below in an interactive map together with previous analyses of the area, which can be navigated using the layers tab.</p>
+				</div>
+				<div class="map">
+					<a href="#" class="image fit">
+						<iframe position= center; width="100%" height="500px" style="border:1" src="https://experience.arcgis.com/experience/dc5d4df977834523a1b995045d48e728/" frameborder="2" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen>allowfullscreen>iFrames are not supported on this page.</iframe>
+					</a>
+				</div>
+				<div>
+					<p class="skills acquired"><b>Skills Aquired:</b> This part of the assignment taught me about using indices to highlight certain landuses (such as vegetation), and learned how to apply this analysis through ArcGIS. Furthermore, I developed my skills on Esri Online through creating the interactive map.</p>
+				</div>
+				<div>
+					<hr>
+					<h3><b>SUMMARY</b></h3>
+					<p>
+						<u>Unsupervised object based</u> – technique used in remote sensing and image analysis to classify objects in an image without predefined training data or labels.</p>
+						<ul>
+						<li><i>Strengths:</i> no human error, no need manually classify, quick</p></li>
+						<li><i>Weaknesses:</i> inaccurate, unwanted classifications</p></li>
+						</ul>
+						<u>Unsupervised pixel based</u> – technique used in remote sensing and image analysis to classify pixels in an image without predefined training data or labels</p>
+						<ul>
+						<li><i>Strengths:</i> no human error, no need manually classify, quick</p></li>
+						<li><i>Weaknesses:</i> inaccurate, unwanted classifications</p></li>
+						</ul>
+						<u>Supervised pixel based</u> – technique used in remote sensing and image analysis to classify objects in an image with predefined training data or labels</p>
+						<ul>
+						<li><i>Strengths:</i> significantly more accurate, tailored to desired classification</p></li>
+						<li><i>Weaknesses:</i> manual data input, time consuming</p></li>
+						</ul>
+						<u>NDVI</u> – method used in remote sensing to analyze and classify vegetation cover in an area using satellite or aerial imagery</p>
+						<ul>
+						<li><i>Strengths:</i> easy to use, quick, provides a quantitative measure, accounts for change in time</p></li>
+						<li><i>Weaknesses:</i> sensitive to atmospheric changes, soil quality affects certain band reflection.</p></li>
+						</ul>
+				</div>
 			</div>
 		</div>
 
 		<div class="footer">
-				<h3>UCU</h3>
-				<p>@EmmasGISPortfolio2024</p>
-			</div>
+			<h3>UCU</h3>
+			<p>@EmmasGISPortfolio2024</p>
+		</div>
 	</body>
 	</html>
