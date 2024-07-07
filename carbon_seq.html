@@ -14,6 +14,9 @@
 			b {
 				font-weight: bold;
 			}
+			i {
+				font-weight: italics;
+			}
 
 
 			body {
@@ -33,6 +36,54 @@
 				margin-top: 100px;
 				width: 74.145%;
 			}
+
+			.carbonseqInfo {
+				margin: 30px;
+			}
+			.definition {
+				background-color: #d7f7f5;
+				padding-left: 40px;
+				padding-right: 40px;
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+			.definition.grid {
+				display: grid;
+           		grid-template-columns: 1fr 1fr 1fr 1fr;
+           		text-align: left;
+           		padding: 0px;
+			}
+
+			.assignment {
+				padding-top: 40px;
+				margin-left:40px;
+				margin-right: 40px;
+				padding-bottom: 40px;
+			}
+			
+			.GEE.layers img {
+				width: 100%;
+			}
+			.interactive {
+					margin-top: 30px;
+					margin-left: 40px;
+					display: grid;
+           			grid-template-columns: 2.5fr 1fr;
+           			margin-bottom: 30px;
+				}
+				.interactive iframe {
+					height: 450px;
+					width: 800px;
+				}
+				.GEE.values {
+					background-color: #d7f7f5;
+					margin-bottom: 180px;
+					padding-top: 20px;
+					margin-top: 80px;
+					padding-right: 10px;
+					margin-right: 45px;
+					padding-left:40px;
+				}
 
 			.footer {
            			background-color: #080808;
@@ -74,7 +125,74 @@
 		    <div class="header">
 				<h1> MAPS </h1>
 			</div>
+			<div class="carbonseqInfo">
+				<h1><b>4. Relative Elevation Model (REM)</b></h1>
+				<hr>
+				<div class="definition">
+					<h4>Key Terminology: Definitions and Relevance for Mapping and Calculating Areas for Carbon Offset Planning</h4>
+					<div class="definition grid">
+					<div>
+					<p>Gross primary production (GPP)</p>
+						<ul>
+							<li>Amount of carbon captured through photosynthesis of all producers in a defined region.</li></p>
+							<li>This is useful for mapping carbon as photosynthesis is part of the carbon cycle. This step shows how much carbon is being taken from the atmosphere and being used up by producers. </li></p>
+						</ul>
+					</div>
+					<div>
+					<p>Aboveground carbon density (ACD)</p>
+						<ul>
+							<li>Amount of carbon that is stored in living vegetation on Earth’s surface. This is an approximation measured by recording the area of a plant that is above ground (e.g. from trunk base to highest branch).</li></p>
+							<li>The ratio between ACD and GPP gives us total carbon sequestration by producers.</li></p>
+						</ul>
+					</div>
+					<div>
+					<p>Forest Cover (FC)</p>
+						<ul>
+							<li>A measure of how much land is available for carbon sequestration in a defined area based on land usage.</li></p>
+							<li>Relevant for land use planning (how spaces can be used and/or changed based on carbon sequestration needs).</li></p>
+						</ul>
+					</div>
+					<div>
+					<p>Carbon sequestration potential index (CSPI)</p>
+						<ul>
+							<li>An indicator that determines carbon sequestration potential. All three other variables are taken into account to determine this final indicator.</li></p>
+							<li>Once again, useful for land use planning and management.</li></p>
+						</ul>
+					</div>
+					</div>
+					<p>All four of these are relevant in mapping within a climate action context.*</p>
+				</div>
 
+				<div class="assignment">
+					<h4>Chosen region of interest (ROI): the island of Bali, southern Indonesia.</h4>
+					<div>
+						<p>What is the <i>geography</i> and <i>climate</i> of Bali?</p>
+						<p>Bali has a tropical climate. It is quite mountainous in certain (inland) areas as well as coastal along the perimeter of the island. Bali is surrounded by coral reefs. In fact, it forms part of the Coral Triangle, the area with the highest biodiversity of marine species on the planet. Still, there are many areas on the island which are more developed and densely populated due to tourism. </p>
+						<hr>
+						<h4>Using Google Earth Engine</h4>
+						<p>The main portion of this assignment was to map the previously defined 'Aboveground Carbon Density (ACD)' and the 'Gross Primary Production (GPP)' of the ROI. To achieve as much, an 'above-ground biomass' dataset for the year 2020 was obtained from European Space Agency Biomass Climate Change Initiative – open source data – and introduced into CSPI code through Google Earth Engine. The code was then taylored to the ROI and once run, the two layers in the interactive map below were procured. (Other key values can also be seen to the right [3 sgf.].)
+
+						<p class="skills acquired"><b>Skills Aquired:</b>During this assignment I learned to use a new coding program on a new mapping engine, further expanding my GIS knowledge. More so, I learned about new perspectives to analyse biomass and carbon data, as well as, continued acknowledgement of the importance of open source data.</p>
+							
+							<div class="interactive">
+								<iframe src="https://ee-roseannashworth.projects.earthengine.app/view/carbon" width="1200" height="600" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.
+				            	</iframe>
+								<div class="GEE values">
+									<p><i>Mean GPP</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.603 tC/ha/y</p>
+									<p><i>Mean CSPI</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.00187</p></p>
+									<p><i>ACD</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;47.4 tC/ha</p></p>
+									<p><i>FC</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;85.3%</p>
+								</div>
+							</div>
+							<h4>Recommended conservation area placement and recommended planting: </h4>
+							<p>It is recommended that the whole area is placed under conservation given the really low CSPI value for this region. As for planting, regions on the GPP map shown in light orange would be recommended as they show low carbon sequestration levels. (Regions in white along the coast are not viable for extra planting as these are beaches and built-up urban areas.)
+							<div class="GEE layers">
+								<img src="maps/ACD and CPP Bali.png">
+							</div>
+					</div>
+				</div>
+
+			</div>
 		    <div class="footer">
 				<h3>UCU</h3>
 				<p>@EmmasGISPortfolio2024</p>

@@ -120,9 +120,9 @@
 					<p>A Relative Elevation Model (REM) is a topographical representation that shows the elevation of terrain relative to a specific reference point within a localized area, rather than absolute elevations relative to sea level. This model highlights relative height differences, providing detailed insights into features like hills, valleys, and depressions. REMs are created using methods like LiDAR, photogrammetry, and satellite imagery, and are particularly useful in applications such as flood risk management, urban planning, environmental monitoring, and agriculture. By focusing on local elevation changes, REMs enable enhanced visualization and detailed analysis for various practical uses.</p>
 				</div>
 				<div class="assignment">
-					<h4>Chosen area of interest: Region of river Maas near Roermond, southern Netherlands</h4>
-					<p>For this assignment we had to chose an area of interest and analyse the relative elevation of the river bank. The reason I chose the river Maas is that it was located in a region that nobody else (in my lab) was analysing and also because it is part of the 'Grote rivieren' (Great rivers) of the Netherlands.</p>
-					<p>Once the area was chosen, we gathered DTM (Digital Terrain Model) open source data from <a href="https://geotiles.citg.tudelft.nl/" target="_blank">https://geotiles.citg.tudelft.nl/</a> and transferred it to QGIS. The data was then subject to multiple tools and calculations to transform it into the final map. Some of the most crucial steps in this conversion include a creating a cross-section layer, where elevation points along the river bank where manually labeled; and a TIN interpolation step, which crops-off the area of interest (in this case the river region). An illustration of these two steps can be seen in the image below, where the orange lines represent the crossections and the silvery shape represents the TIN layer.</p>
+					<h4>Chosen region of interest (ROI): Region of river Maas near Roermond, southern Netherlands</h4>
+					<p>For this assignment we had to chose a region of interest and analyse the relative elevation of the river bank. The reason I chose the river Maas is that it was located in a region that nobody else (in my lab) was analysing and also because it is part of the 'Grote rivieren' (Great rivers) of the Netherlands.</p>
+					<p>Once the ROI was chosen, we gathered DTM (Digital Terrain Model) open source data from <a href="https://geotiles.citg.tudelft.nl/" target="_blank">https://geotiles.citg.tudelft.nl/</a> and transferred it to QGIS. The data was then subject to multiple tools and calculations to transform it into the final map. Some of the most crucial steps in this conversion include a creating a cross-section layer, where elevation points along the river bank where manually labeled; and a TIN interpolation step, which crops-off the area of interest (in this case the river region). An illustration of these two steps can be seen in the image below, where the orange lines represent the crossections and the silvery shape represents the TIN layer.</p>
 					<div class="tin_layer">
 						<img src="maps/tin layer.png">
 					</div>
@@ -134,6 +134,7 @@
 					<div class="color_and_stretch">
 						<img src="maps/Stretch and color scheme.png">
 					</div>
+					<p class="skills acquired"><b>Skills Aquired:</b> Through this assignment I became even more comfortable using QGIS. I also learned a lot about the importance of scale and color scheme when it comes to portraying data. Moreover, I learned new cartographic features (some of which are present in the final map below!) and new analysis tools that can help in focusing in on a chosen region.</p>
 					<h3>Final REM map</h3>
 					<p>As for the final map, the results can be seen below – including scale bar, title, legend, and north arrow.</p>
 					<div class="final_map">
