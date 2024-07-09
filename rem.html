@@ -50,6 +50,10 @@
 				margin-right: 40px;
 				padding-bottom: 40px;
 			}
+			.assignment a {
+				text-decoration: none;
+				color: blueviolet;
+			}
 			.tin_layer, .color_and_stretch {
 				text-align: center;
 				padding-top: 20px;
@@ -122,7 +126,7 @@
 				<div class="assignment">
 					<h4>Chosen region of interest (ROI): Region of river Maas near Roermond, southern Netherlands</h4>
 					<p>For this assignment we had to chose a region of interest and analyse the relative elevation of the river bank. The reason I chose the river Maas is that it was located in a region that nobody else (in my lab) was analysing and also because it is part of the 'Grote rivieren' (Great rivers) of the Netherlands.</p>
-					<p>Once the ROI was chosen, we gathered DTM (Digital Terrain Model) open source data from <a href="https://geotiles.citg.tudelft.nl/" target="_blank">https://geotiles.citg.tudelft.nl/</a> and transferred it to QGIS. The data was then subject to multiple tools and calculations to transform it into the final map. Some of the most crucial steps in this conversion include a creating a cross-section layer, where elevation points along the river bank where manually labeled; and a TIN interpolation step, which crops-off the area of interest (in this case the river region). An illustration of these two steps can be seen in the image below, where the orange lines represent the crossections and the silvery shape represents the TIN layer.</p>
+					<p>Once the ROI was chosen, we gathered DTM (Digital Terrain Model) open source data from <a href="https://geotiles.citg.tudelft.nl/" target="_blank">GeoTiles</a> and transferred it to QGIS. The data was then subject to multiple tools and calculations to transform it into the final map. Some of the most crucial steps in this conversion include a creating a cross-section layer, where elevation points along the river bank where manually labeled; and a TIN interpolation step, which crops-off the area of interest (in this case the river region). An illustration of these two steps can be seen in the image below, where the orange lines represent the crossections and the silvery shape represents the TIN layer.</p>
 					<div class="tin_layer">
 						<img src="maps/tin layer.png">
 					</div>
